@@ -1073,7 +1073,8 @@ CREATE TABLE "public"."demo_favorites" (
     "id" bigint NOT NULL,
     "user_email" text NOT NULL,
     "item_name" text NOT NULL,
-    "created_at" timestamp(6) with time zone DEFAULT now() NOT NULL
+    "created_at" timestamp(6) with time zone DEFAULT now() NOT NULL,
+    "note" text
 );
 
 ALTER TABLE "public"."demo_favorites" ALTER COLUMN "id" ADD GENERATED ALWAYS AS IDENTITY (
